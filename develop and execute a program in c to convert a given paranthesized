@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <string.h>
+int top =-1;
+char s[20];
+char infix[20];
+char postfix[20];
+void inf_to post();
+int sp(char);
+int ip(char);
+void push(char);
+char pop();
+void main()
+{
+    printf("enter a valid infin expression\n");
+    scanf("%s",infix);
+    inf_to_post();
+    printf("the positive expression is %s",postfix);
+}
+    void push (char items)
+{
+    s(++top)=item;
+}  
+    char pop()
+{
+    returns(top--);
+}  
+   int sp(char item)
+{
+    switch(item)
+{   
+    case '+':
+    case '-' return2;
+    case '+':
+    case '/': return4;
+    case '^':
+    case '$': return5;
+    case '(': return0;
+    case '#': return-1;
+    default;  return8;
+}
+} 
+  int ip(char item)
+  {
+      switch(item)
+  {
+      case '+'
+      case '-': return1;
+      case '*':
+      case '/': return3;
+      case '^':
+      case '$': return6;
+      case '(': return9;
+      case ')': return0;
+      default : return7;
+  }
+  }
+     void inf_topast()
+     {
+         int i,j=0;
+         char symbol;
+         push('#');
+         for(i=0;i<strlen(infix);i++)
+         {
+             symbol = infix[i];
+             while (sp(s[top]) > ip(ymbol))
+        {  
+            postfix[j]=pop();
+            j++
+        }
+          if(sp(s[top])< ip(symbol))
+         {
+     push (symbol);
+         }
+         if(sp(s[top])==ip(symbol))
+         {
+             pop
+         }
+          while(s(top)!='#')
+         {
+             postfix[j]=pop();
+             j++;
+         }
+           postfix[j]= '\0';
+         }
